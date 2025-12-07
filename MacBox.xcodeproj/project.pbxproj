@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		26807FBA2EC638EF003FD511 /* SwiftUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 26807FB92EC638EF003FD511 /* SwiftUtils */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		26807FAA2EC638A4003FD511 /* MacBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26807FBA2EC638EF003FD511 /* SwiftUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = MacBox;
 			packageProductDependencies = (
+				26807FB92EC638EF003FD511 /* SwiftUtils */,
 			);
 			productName = MacBox;
 			productReference = 26807FAA2EC638A4003FD511 /* MacBox.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 26807FA12EC638A4003FD511;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				26807FB82EC638EF003FD511 /* XCRemoteSwiftPackageReference "SwiftUtils" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 26807FAB2EC638A4003FD511 /* Products */;
 			projectDirPath = "";
@@ -331,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26807FB82EC638EF003FD511 /* XCRemoteSwiftPackageReference "SwiftUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zhihaofans/SwiftUtils";
+			requirement = {
+				kind = exactVersion;
+				version = "0.0.12-c";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26807FB92EC638EF003FD511 /* SwiftUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26807FB82EC638EF003FD511 /* XCRemoteSwiftPackageReference "SwiftUtils" */;
+			productName = SwiftUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26807FA22EC638A4003FD511 /* Project object */;
 }
