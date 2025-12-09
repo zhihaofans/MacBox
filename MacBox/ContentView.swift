@@ -34,7 +34,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationTitle("工具箱")
+            .navigationTitle("MacBox")
         }
     }
 }
