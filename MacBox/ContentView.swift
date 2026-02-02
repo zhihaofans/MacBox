@@ -8,33 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedSidebar: SidebarItem? = .home
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: [
-                    GridItem(.adaptive(minimum: 160), spacing: 20)
-                ], spacing: 20) {
-                    ForEach(tools) { tool in
-                        NavigationLink {
-                            ToolDetailView(tool: tool)
-                        } label: {
-                            VStack(spacing: 12) {
-                                Image(systemName: tool.icon)
-                                    .font(.system(size: 36))
-                                Text(tool.name)
-                                    .font(.headline)
-                            }
-                            .frame(maxWidth: .infinity, minHeight: 120)
-                            .padding()
-                            .background(Color.secondary.opacity(0.1))
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
-                        }
-                        .buttonStyle(.plain)
-                    }
+        NavigationSplitView {
+            SidebarView(selected: $selectedSidebar)
+        } detail: {
+            NavigationStack {
+                switch selectedSidebar {
+                default:
+                    Text("Hello, nil!")
                 }
-                .padding()
             }
-            .navigationTitle("MacBox")
         }
+        .navigationSplitViewStyle(.prominentDetail)
     }
 }
