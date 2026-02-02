@@ -366,8 +366,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zhihaofans/SwiftUtils";
 			requirement = {
-				kind = exactVersion;
-				version = "0.0.12-c";
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.0.18;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
