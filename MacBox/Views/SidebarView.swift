@@ -9,6 +9,7 @@ import SwiftUI
 
 enum SidebarItem: String, CaseIterable, Hashable, Identifiable {
     case home = "首页"
+    case textTool_base64text = "Base64文本编码/解码"
     case setting = "设置"
 
     var id: String {
@@ -19,6 +20,7 @@ enum SidebarItem: String, CaseIterable, Hashable, Identifiable {
         switch self {
         case .home: return "house"
         case .setting: return "gear"
+        case .textTool_base64text: return "46.square"
         }
     }
 }
