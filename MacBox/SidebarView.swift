@@ -10,6 +10,7 @@ import SwiftUI
 enum SidebarItem: String, CaseIterable, Hashable, Identifiable {
     case home = "首页"
     case textTool_base64text = "Base64文本编码/解码"
+    case textTool_base64image = "Base64图片编码/解码"
     case textTool_urlencode = "URL编码/解码"
     case setting = "设置"
 
@@ -23,6 +24,7 @@ enum SidebarItem: String, CaseIterable, Hashable, Identifiable {
         case .setting: return "gear"
         case .textTool_base64text: return "46.square"
         case .textTool_urlencode: return "link.badge.plus"
+        case .textTool_base64image: return "text.below.photo"
         }
     }
 }

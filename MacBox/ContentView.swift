@@ -15,10 +15,10 @@ struct ContentView: View {
         } detail: {
             NavigationStack {
                 switch selectedSidebar {
-                    case .textTool_base64text:
-                        TextToTextTool(.textTool_base64text)
-                    default:
-                        Text("Hello, nil!")
+                case .textTool_base64text, .textTool_urlencode, .textTool_base64image:
+                    TextToolView(selectedSidebar!)
+                default:
+                    Text("Hello, nil!")
                 }
             }
         }
