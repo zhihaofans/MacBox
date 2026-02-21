@@ -14,9 +14,9 @@ struct TextToolView: View {
     var body: some View {
         switch type {
         case .textTool_base64text, .textTool_urlencode:
-            TextToTextView(type)
+            TextToTextView(type).id(type)
         case .textTool_base64image:
-            TextToImageView(type)
+            TextToImageView(type).id(type)
         default:
             Text("还不支持")
         }
@@ -24,7 +24,7 @@ struct TextToolView: View {
 
     init(_ type: SidebarItem) {
         self.type = type
-    }
+    }
 }
 
 private struct TextToTextView: View {
